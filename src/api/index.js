@@ -8,13 +8,11 @@ const handler = (ctx, next) => {
     ctx.body = `${ctx.request.method} ${ctx.request.path}`;
 };
 
-api.get('/', apiCtrl.list);
+api.get('/select', apiCtrl.list);
 
-api.post('/', apiCtrl.create);
+api.post('/insert', apiCtrl.insert);
 
-api.delete('/', apiCtrl.delete);
-
-api.put('/', apiCtrl.replace);
+api.get('/delete', apiCtrl.delete);
 
 api.patch('/', apiCtrl.update);
 
