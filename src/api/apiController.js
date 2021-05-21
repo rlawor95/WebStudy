@@ -10,13 +10,13 @@ exports.list = (ctx) => {
                     console.log(error);
                 }
                 else {
-                   console.log("result ", result);
-                   console.log("result ", result[0].id);
-                   console.log("fields " , fields)
+                    console.log("result ", result);
+                    console.log("result ", result[0].id);
+
                     console.log("success");
-                 var v = result[0].id;
-                 console.log(v);
-                 ctx.body = v; // 화면에 어떻게 뿌리지 ?
+                    var v = result[0].id;
+                    console.log(v);
+                    ctx.body = v; // 화면에 어떻게 뿌리지 ?
                 }
             });
             connection.release;
@@ -53,5 +53,7 @@ exports.delete = (ctx) => {
 
 exports.update = (ctx) => {
     ctx.body = 'updated';
+
+    console.log(ctx.param);
 };
 

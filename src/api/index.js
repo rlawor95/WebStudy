@@ -14,7 +14,7 @@ api.post('/insert', apiCtrl.insert);
 
 api.get('/delete', apiCtrl.delete);
 
-api.patch('/', apiCtrl.update);
+api.post('/update', apiCtrl.update);
 
 module.exports = api;
 
